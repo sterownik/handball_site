@@ -1,18 +1,13 @@
 import React from "react";
 import styled from "@emotion/styled";
+import Header from "../organisms/Header";
 
 const MainLayout = () => {
     return (
-        <div>
-            <StyledTest>
-                Wojtek
-            </StyledTest>
-        </div>
+        <>
+            <Header />
+        </>
     )
 }
-
-const StyledTest = styled.p`
-    color: ${(props) => props.theme.colorYellow};
-`;
 
 export default MainLayout;

@@ -9,7 +9,9 @@ const Theme = ({children}) => {
             <ThemeProvider theme={theme}>
                 <Global styles={css`
                     body {
-                        background-color: red;
+                        background-color: #85D397;
+                        margin: 0;
+                        font-family: sans-serif;
                     }
                 `}
                 />
