@@ -8,42 +8,51 @@ export const slice = createSlice({
             {
                 id: 0,
                 title: "Aktualności",
-                submenu: []
+                submenu: [],
+                path: "/"
             },
             {
                 id: 1,
                 title: "Kluby",
-                submenu: []
+                submenu: [],
+                path: "/clubs",
             },
             {
                 id: 2,
                 title: "Sędziowie",
+                path: "/referees",
                 submenu: [
                     {
                         id: 10,
-                        title: "Komisja ZPRP"
+                        title: "Komisja ZPRP",
+                        path: "/board"
                     },
                     {
                         id: 11,
-                        title: "Komisja Podkarpackie WZPR"
+                        title: "Komisja Podkarpackie WZPR",
+                        path: "/boardvoivo"
                     },
                     {
                         id: 12,
-                        title: "Lista sędziów"
+                        title: "Lista sędziów",
+                        path: "/referees"
                     },
                 ]
             },
             {
                 id: 3,
                 title: "Przepisy",
+                path: "/rules",
                 submenu: [
                     {
                         id: 20,
-                        title: "Przepisy"
+                        title: "Przepisy",
+                        path: "/rules"
                     },
                     {
                         id: 21,
-                        title: "Stawki"
+                        title: "Stawki",
+                        path: "/field",
                     }
                 ]
             }

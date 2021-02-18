@@ -9,29 +9,27 @@ const Navigation = () => {
     console.log(navs);
 
     const navigationItems = navs.map((item) =>
-        <StyledMenuItem key={item.id}><a href="">{item.title}</a>
+        <StyledMenuItem key={item.id}><Link to={item.path}>{item.title}</Link>
             {(item.submenu.length > 0) ?
                 <StyledSubMenu>
                     {item.submenu.map((itemSub) =>
                         <StyledSubMenuItem>
-                            <a href="">{itemSub.title}</a>
+                            <Link to={itemSub.path}>{itemSub.title}</Link>
                         </StyledSubMenuItem>
                     )}
                 </StyledSubMenu>
             : null}
         </StyledMenuItem>
-    );
+    )
 
     return (
         <StyledWrapper>
-            <Link to="/">Home</Link>
-            <Link to="/clubs">clubs</Link>
             <StyledFlexBox>
                 {navigationItems}
             </StyledFlexBox>
         </StyledWrapper>
     )
-}
+};
 
 const StyledWrapper = styled.div`
     width: 100%;
@@ -52,19 +50,40 @@ const StyledMenuItem = styled.li`
     padding: 20px 0;
     text-align: center;
     position: relative;
+    
+    a {
+        color: ${(props) => props.theme.colorBlackLight};
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+      
+    ul {
+        display: none;
+    }
+    
+    &:hover {
+        ul {
+            display: block;
+        }
+    }
 `;
 
 const StyledSubMenu = styled.ul`
+    background-color: ${(props) => props.theme.colorGreenLight};
+    border-top: 1px solid ${(props) => props.theme.colorWhite};
     position: absolute;
     list-style: none;
-    padding: 20px 0 0;
+    margin: 20px 0 0;
+    padding: 0;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
 `;
 
 const StyledSubMenuItem = styled.li`
-    color: red;
     padding: 10px;
+    border-bottom: 1px solid ${(props) => props.theme.colorWhite};
 `;
 
 export default Navigation;
