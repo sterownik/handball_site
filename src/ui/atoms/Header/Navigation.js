@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import { useSelector } from "react-redux";
 import { navigationData } from "../../../redux/reducers/navigationSlice";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
     const navs = useSelector(navigationData);
@@ -23,6 +24,8 @@ const Navigation = () => {
 
     return (
         <StyledWrapper>
+            <Link to="/">Home</Link>
+            <Link to="/clubs">clubs</Link>
             <StyledFlexBox>
                 {navigationItems}
             </StyledFlexBox>
