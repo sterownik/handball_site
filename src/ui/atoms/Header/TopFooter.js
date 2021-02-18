@@ -51,6 +51,4 @@ const StyledItem = styled.div`
     }
 `;
 
-
-
 export default TopFooter;

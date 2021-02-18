@@ -8,6 +8,6 @@ const MainLayout = () => {
             <Header />
         </>
     )
-}
+};
 
 export default MainLayout;

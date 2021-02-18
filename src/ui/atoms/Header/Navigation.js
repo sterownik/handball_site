@@ -17,7 +17,7 @@ const Navigation = () => {
                         </StyledSubMenuItem>
                     )}
                 </StyledSubMenu>
-                : null}
+            : null}
         </StyledMenuItem>
     );
 
@@ -57,11 +57,11 @@ const StyledSubMenu = styled.ul`
     padding: 20px 0 0;
     left: 50%;
     transform: translateX(-50%);
-`
+`;
 
 const StyledSubMenuItem = styled.li`
     color: red;
     padding: 10px;
-`
+`;
 
 export default Navigation;
