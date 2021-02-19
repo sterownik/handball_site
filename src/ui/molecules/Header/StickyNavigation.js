@@ -6,14 +6,15 @@ import TopFooter from "../../atoms/Header/TopFooter";
 const StickyNavigation = () => {
     return (
         <StyledNaviationWrapper>
-            <TopFooter />
             <Navigation />
         </StyledNaviationWrapper>
     )
 };
 
 const StyledNaviationWrapper = styled.div`
-    
+   position: sticky;
+    position: -webkit-sticky;
+    top: 0; 
 `;
 
 export default StickyNavigation;

@@ -8,4 +8,5 @@ export const theme = createMuiTheme({
     colorWhite: "#FFF",
     colorGrey: "#BBB",
     colorGreenLight: "#A8E6BA",
+    colorGreenLighter: "#B7E4C7",
 });

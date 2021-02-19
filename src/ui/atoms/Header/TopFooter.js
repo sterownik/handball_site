@@ -7,23 +7,19 @@ const TopFooter = () => {
     const contacts = useSelector(contactData);
 
     return (
-        <>
             <StyledWrapper>
                 <StyledFlexBox>
                     <StyledItem>
-                      <span>e-mail: </span> {contacts.email}
+                      <span>e-mail: </span><p>{contacts.email}</p>
                     </StyledItem>
-
                     <StyledItem>
-                        <span>telefon: </span> {contacts.telephone}
+                        <span>telefon: </span><p>{contacts.telephone}</p>
                     </StyledItem>
-
                     <StyledItem>
-                        <span>adres: </span> {contacts.address}
+                        <span>adres: </span> <p>{contacts.address}</p>
                     </StyledItem>
                 </StyledFlexBox>
             </StyledWrapper>
-        </>
     )
 };
 
@@ -43,11 +39,29 @@ const StyledItem = styled.div`
     flex-basis: 30%;
     color: ${(props) => props.theme.colorWhite};
     text-align: center;
-    padding: 10px 0;
+    
+    p {
+        padding: 5px 0;
+        margin: 0;
+    }
+    
+    @media (max-width: 720px) {
+        p {
+            font-size: 12px;
+            padding: 5px;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
     
     span {
         color: ${(props) => props.theme.colorGrey};
         font-size: 15px;
+        
+        @media (max-width: 720px) {
+            display: none;
+        }
     }
 `;
 
