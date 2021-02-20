@@ -290,6 +290,35 @@ const StyledSubMenu = styled.ul`
 const StyledSubMenuItem = styled.li`
     padding: 10px;
     border-bottom: 1px solid ${(props) => props.theme.colorWhite};
+    position: relative;
+    
+    :hover {
+        &:after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: ${(props) => props.theme.colorBlackLight};
+            bottom: -1px;
+            animation: menuAnimationHover .5s linear forwards;
+        }
+    }
+    
+    @keyframes menuAnimationHover {
+        0% {
+            width: 0%;
+        }
+        25% {
+            width: 25%;
+        }
+        50% {
+            width: 50%;
+        }
+        100% {
+            width: 100%;
+        }
+    }
 `;
 
 export default Navigation;
