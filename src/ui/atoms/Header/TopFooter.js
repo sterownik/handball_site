@@ -43,11 +43,13 @@ const StyledItem = styled.div`
     p {
         padding: 5px 0;
         margin: 0;
+        display: inline;
     }
     
     @media (max-width: 720px) {
         p {
             font-size: 12px;
+            display: block;
             padding: 5px;
             position: relative;
             top: 50%;

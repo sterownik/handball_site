@@ -187,7 +187,7 @@ const StyledWrapperMobile = styled.ul`
 `;
 
 const StyledMenuItem = styled.li`
-    flex-basis: 18%;
+    flex-basis: 22.5%;
     padding: 20px 0;
     text-align: center;
     position: relative;
