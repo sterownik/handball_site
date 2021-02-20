@@ -26,6 +26,8 @@ const TopFooter = () => {
 const StyledWrapper = styled.div`
     width: 100%;
     background-color: ${(props) => props.theme.colorBlackLight};
+    z-index: 1;
+    position: relative;
 `;
 
 const StyledFlexBox = styled.div`

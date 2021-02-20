@@ -12,9 +12,9 @@ const StickyNavigation = () => {
 };
 
 const StyledNaviationWrapper = styled.div`
-   position: sticky;
+    position: sticky;
     position: -webkit-sticky;
-    top: 0; 
+    top: 0;
 `;
 
 export default StickyNavigation;

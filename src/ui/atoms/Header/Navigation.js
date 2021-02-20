@@ -16,19 +16,20 @@ const Navigation = () => {
     const dispatch = useDispatch();
 
     const navigationItemsMobile = navs.map(item =>
-            <div>
+            <div key={item.id}>
                 {item.submenu.length > 0 ?
                     <Accordion>
                         <AccordionSummary
                             expandIcon={<span><img src="/icons/arrow-down.png" alt=""/></span>}
                             aria-controls="panel1a-content"
                             id="panel1a-header"
+
                         >
                             <p>{item.title}</p>
                         </AccordionSummary>
                             {item.submenu.map((itemSubMenu) =>
-                                    <AccordionDetails>
-                                    <Link onClick={() => dispatch(changeFlag())} to={itemSubMenu.path}>{itemSubMenu.title}</Link>
+                                    <AccordionDetails key={itemSubMenu.id}>
+                                        <Link onClick={() => dispatch(changeFlag())} to={itemSubMenu.path}>{itemSubMenu.title}</Link>
                                     </AccordionDetails>
                                 )
                             }
@@ -221,15 +222,15 @@ const StyledMenuItem = styled.li`
     
     &:hover {
         div {
-            transition: 1s;
+            transition: .5s;
             transform: translateY(-50%) rotate(180deg);
         }
     
         &:after {
             content: "";
             position: absolute;
-            width: 100%;
-            height: 1px;
+            animation: menuAnimationHover .5s linear forwards;
+            height: 2px;
             background-color: ${(props) => props.theme.colorWhite};
             bottom: 0;
             left: 50%;
@@ -239,6 +240,37 @@ const StyledMenuItem = styled.li`
     
         ul {
             display: block;
+            animation: subMenuSliceIn .5s linear forwards;
+        }
+    }
+    
+    @keyframes subMenuSliceIn {
+        0% {
+            top: -25%;
+        }
+        25% {
+            top: 25%;
+        }
+        50% {
+            top: 50%;
+        }
+        100% {
+            top: 100%;
+        }
+    }
+    
+    @keyframes menuAnimationHover {
+        0% {
+            width: 0%;
+        }
+        25% {
+            width: 25%;
+        }
+        50% {
+            width: 50%;
+        }
+        100% {
+            width: 70%;
         }
     }
 `;
@@ -248,11 +280,11 @@ const StyledSubMenu = styled.ul`
     border-top: 1px solid ${(props) => props.theme.colorWhite};
     position: absolute;
     list-style: none;
-    margin: 20px 0 0;
     padding: 0;
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
+    z-index: -1;
 `;
 
 const StyledSubMenuItem = styled.li`
