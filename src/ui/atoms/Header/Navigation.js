@@ -45,15 +45,18 @@ const Navigation = () => {
     )
 
     const navigationItems = navs.map((item) =>
-        <StyledMenuItem key={item.id}><Link to={item.path}>{item.title}</Link>
+        <StyledMenuItem styleKey={(item.submenu.length > 0)} key={item.id}><Link to={item.path}>{item.title}</Link>
             {(item.submenu.length > 0) ?
-                <StyledSubMenu>
-                    {item.submenu.map((itemSub) =>
-                        <StyledSubMenuItem key={itemSub.id}>
-                            <Link to={itemSub.path}>{itemSub.title}</Link>
-                        </StyledSubMenuItem>
-                    )}
-                </StyledSubMenu>
+                <>
+                    <StyledIconSubMenu><img src="/icons/arrow-down.png" alt=""/></StyledIconSubMenu>
+                    <StyledSubMenu>
+                        {item.submenu.map((itemSub) =>
+                            <StyledSubMenuItem key={itemSub.id}>
+                                <Link to={itemSub.path}>{itemSub.title}</Link>
+                            </StyledSubMenuItem>
+                        )}
+                    </StyledSubMenu>
+                </>
             : null}
         </StyledMenuItem>
     );
@@ -101,6 +104,19 @@ const StyledFlexBox = styled.ul`
     justify-content: space-between;
     list-style: none;
     padding: 0;
+`;
+
+const StyledIconSubMenu = styled.div`
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+      
+    img {
+        width: 20px;
+    }
 `;
 
 const StyledWrapperAccordion = styled.div`
@@ -204,6 +220,23 @@ const StyledMenuItem = styled.li`
     }
     
     &:hover {
+        div {
+            transition: 1s;
+            transform: translateY(-50%) rotate(180deg);
+        }
+    
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: ${(props) => props.theme.colorWhite};
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: ${(props) => props.styleKey ? "none" : "block"};
+        }
+    
         ul {
             display: block;
         }
