@@ -239,7 +239,7 @@ const StyledMenuItem = styled.li`
     
     @keyframes subMenuSliceIn {
         0% {
-            top: -25%;
+            top: 0%;
         }
         25% {
             top: 25%;
