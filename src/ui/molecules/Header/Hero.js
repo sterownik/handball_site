@@ -9,7 +9,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Hero = () => {
     const slide_photos = useSelector(sliderPhotosData);
-    console.log(slide_photos);
 
     const sliderPhotos = slide_photos.map((item) =>
         <SliderItem src={item.path}/>
@@ -17,11 +16,15 @@ const Hero = () => {
 
     let settings = {
         dots: false,
-        arrows: false,
+        arrows: true,
         infinite: true,
-        speed: 500,
+        speed: 800,
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        lazyLoad: true,
+        fade: true,
         responsive: [
             {
                 breakpoint: 1024,
@@ -41,6 +44,34 @@ const Hero = () => {
 };
 
 const StyledSlider = styled(Slider)`
+    .slick-arrow {
+        width: 5%;
+        background-color: ${(props) => props.theme.colorWhite};
+        opacity: .2;
+        height: 100%;
+        transform: none;
+        top: 0;
+        transition: .5s;
+        z-index: 1;
+        
+        &:before {
+            color: ${(props) => props.theme.colorBlackLight};
+            font-size: 40px;
+        }
+        
+        &:hover {
+            opacity: .3;
+        }
+        
+        &.slick-next {
+            right: 0;
+        }
+        
+        &.slick-prev {
+            left: 0;
+        }
+    }
+
     .slick-slide {
         img {
             width: 100vw;
@@ -51,6 +82,24 @@ const StyledSlider = styled(Slider)`
     }
     
     @media (max-width: 720px) {
+        .slick-arrow {
+            background-color: inherit;
+            opacity: .5;
+            width: 40px;
+        
+            &.slick-next {
+                right: 10px;
+            }
+            
+            &.slick-prev {
+                left: 10px;
+            }
+            
+            &:before {
+                color: ${(props) => props.theme.colorWhite};
+            }
+        }
+    
          .slick-slide img {
             height: 30vh;
         }

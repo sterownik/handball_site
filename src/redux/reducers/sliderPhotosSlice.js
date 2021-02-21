@@ -13,6 +13,9 @@ export const slice = createSlice({
         },{
             id: 3,
             path: "/sliderPhotos/test3.jpg"
+        },{
+            id: 4,
+            path: "/sliderPhotos/test5.jpg"
         }]
     }
 });
