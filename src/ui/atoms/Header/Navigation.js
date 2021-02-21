@@ -17,13 +17,13 @@ const Navigation = () => {
 
     const navigationItemsMobile = navs.map(item =>
             <div key={item.id}>
-                {item.submenu.length > 0 ?
+                {item.submenu.length > 0
+                    ?
                     <Accordion>
                         <AccordionSummary
                             expandIcon={<span><img src="/icons/arrow-down.png" alt=""/></span>}
                             aria-controls="panel1a-content"
                             id="panel1a-header"
-
                         >
                             <p>{item.title}</p>
                         </AccordionSummary>
@@ -75,17 +75,10 @@ const Navigation = () => {
                     <WrapperImg height={50}><img src="/logs/logo-company.png" alt=""/></WrapperImg>
                     <WrapperImg height={50}><img src="/logs/logo-company-second.png" alt=""/></WrapperImg>
                     <WrapperImg onClick={() => dispatch(changeFlag())} height={30}>
-                        {!navFlag ? <img src="/icons/menu.png" alt=""/>
-                        :
-                            <img src="/icons/close.png" alt=""/>
-                        }
+                        {!navFlag ? <img src="/icons/menu.png" alt=""/> : <img src="/icons/close.png" alt=""/>}
                     </WrapperImg>
                 </StyledWrapperMobile>
-                    {navFlag ?
-                        <StyledWrapperAccordion>{navigationItemsMobile}</StyledWrapperAccordion>
-                        :
-                        null
-                    }
+                    {navFlag ? <StyledWrapperAccordion>{navigationItemsMobile}</StyledWrapperAccordion> : null}
             </div>
             }
 

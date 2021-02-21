@@ -15,6 +15,7 @@ const StyledNaviationWrapper = styled.div`
     position: sticky;
     position: -webkit-sticky;
     top: 0;
+    z-index: 2;
 `;
 
 export default StickyNavigation;
