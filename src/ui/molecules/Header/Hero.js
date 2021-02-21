@@ -41,10 +41,13 @@ const Hero = () => {
 };
 
 const StyledSlider = styled(Slider)`
-    .slick-slide img {
-        width: 100%;
-        height: 60vh;
-        object-fit: cover;
+    .slick-slide {
+        img {
+            width: 100vw;
+            height: 70vh;
+            object-fit: cover;
+            position: relative;
+        }
     }
     
     @media (max-width: 720px) {
