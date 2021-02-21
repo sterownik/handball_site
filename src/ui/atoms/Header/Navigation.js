@@ -21,7 +21,7 @@ const Navigation = () => {
                     ?
                     <Accordion>
                         <AccordionSummary
-                            expandIcon={<span><img src="/icons/arrow-down.png" alt=""/></span>}
+                            expandIcon={<span><img src="./icons/arrow-down.png" alt=""/></span>}
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                         >
@@ -49,7 +49,7 @@ const Navigation = () => {
         <StyledMenuItem styleKey={(item.submenu.length > 0)} key={item.id}><Link to={item.path}>{item.title}</Link>
             {(item.submenu.length > 0) ?
                 <>
-                    <StyledIconSubMenu><img src="/icons/arrow-down.png" alt=""/></StyledIconSubMenu>
+                    <StyledIconSubMenu><img src="./icons/arrow-down.png" alt=""/></StyledIconSubMenu>
                     <StyledSubMenu>
                         {item.submenu.map((itemSub) =>
                             <StyledSubMenuItem key={itemSub.id}>
@@ -66,16 +66,16 @@ const Navigation = () => {
         <StyledWrapper>
             {matches ?
                 <StyledFlexBox>
-                    <WrapperImg height={50}><img src="/logs/logo-company.png" alt=""/></WrapperImg>
+                    <WrapperImg height={50}><img src="./logs/logo-company.png" alt=""/></WrapperImg>
                     {navigationItems}
-                    <WrapperImg height={50}><img src="/logs/logo-company-second.png" alt=""/></WrapperImg>
+                    <WrapperImg height={50}><img src="./logs/logo-company-second.png" alt=""/></WrapperImg>
                 </StyledFlexBox>
             :<div>
                 <StyledWrapperMobile>
-                    <WrapperImg height={50}><img src="/logs/logo-company.png" alt=""/></WrapperImg>
-                    <WrapperImg height={50}><img src="/logs/logo-company-second.png" alt=""/></WrapperImg>
+                    <WrapperImg height={50}><img src="./logs/logo-company.png" alt=""/></WrapperImg>
+                    <WrapperImg height={50}><img src="./logs/logo-company-second.png" alt=""/></WrapperImg>
                     <WrapperImg onClick={() => dispatch(changeFlag())} height={30}>
-                        {!navFlag ? <img src="/icons/menu.png" alt=""/> : <img src="/icons/close.png" alt=""/>}
+                        {!navFlag ? <img src="./icons/menu.png" alt=""/> : <img src="./icons/close.png" alt=""/>}
                     </WrapperImg>
                 </StyledWrapperMobile>
                     {navFlag ? <StyledWrapperAccordion>{navigationItemsMobile}</StyledWrapperAccordion> : null}
