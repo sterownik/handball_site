@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 const MainLayout = () => {
     return (
         <>
-            <Router>
+            <Router basename={process.env.PUBLIC_URL}>
                 <Header />
                 <Content />
             </Router>
