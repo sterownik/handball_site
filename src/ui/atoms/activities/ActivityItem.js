@@ -45,6 +45,10 @@ const StyledCard = styled(Card)`
         background-size: cover;
         background-repeat: no-repeat;
     }
+    
+    @media (max-width: 720px) {
+        width: 90%;
+    }
 `;
 
 export default ActivityItem;
