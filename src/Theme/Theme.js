@@ -13,10 +13,6 @@ const Theme = ({children}) => {
                         margin: 0;
                         font-family: sans-serif;
                     }
-                    
-                    #root {
-                        height: 200vh;
-                    }
                 `}
                 />
                 {children}
