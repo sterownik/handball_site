@@ -16,12 +16,12 @@ const ActivityItem = (props) => {
                     title={props.activity.title}
                 />
                 <CardContent>
-                    <p  >
+                    <StyledTitle>
                         {props.activity.title}
-                    </p>
-                    <p>
+                    </StyledTitle>
+                    <StyledText>
                         {props.activity.text.substring(0,300)}
-                    </p>
+                    </StyledText>
                 </CardContent>
             </CardActionArea>
             <CardActions>
@@ -36,9 +36,26 @@ const ActivityItem = (props) => {
     )
 };
 
+const StyledTitle = styled.h5`
+    font-size: 30px;
+    font-family: sans-serif;
+    padding: 15px 0;
+    margin: 0;
+`;
+
+const StyledText = styled.p`
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: justify;
+`;
+
 const StyledCard = styled(Card)`
     width: 50%;
     margin: 5% auto;
+    
+    &.MuiPaper-elevation1 {
+        box-shadow: 10px 5px 5px black;
+    }
     
     .MuiCardMedia-root {
         height: 300px;
