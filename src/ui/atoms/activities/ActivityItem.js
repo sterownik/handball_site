@@ -41,12 +41,20 @@ const StyledTitle = styled.h5`
     font-family: sans-serif;
     padding: 15px 0;
     margin: 0;
+    
+    @media (max-width: 720px) {
+        font-size: 25px;
+    }
 `;
 
 const StyledText = styled.p`
     font-size: 20px;
     font-family: sans-serif;
     text-align: justify;
+    
+    @media (max-width: 720px) {
+        font-size: 18px;
+    }
 `;
 
 const StyledCard = styled(Card)`
