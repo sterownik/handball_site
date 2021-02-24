@@ -4,6 +4,7 @@ import navigationSlice from "./reducers/navigationSlice";
 import mobileMenuReducer from "./reducers/mobileMenuSlice";
 import sliderPhotosSlice from "./reducers/sliderPhotosSlice";
 import activitiesSlice from "./reducers/activitiesSlice";
+import controlActivitiesSlice from "./reducers/controlActivitiesSlice";
 
 export default configureStore({
     reducer: {
@@ -11,6 +12,7 @@ export default configureStore({
         navigation: navigationSlice,
         showMobileMenu: mobileMenuReducer,
         slideshow: sliderPhotosSlice,
-        activities: activitiesSlice
+        activities: activitiesSlice,
+        controlActivity: controlActivitiesSlice
     }
 });

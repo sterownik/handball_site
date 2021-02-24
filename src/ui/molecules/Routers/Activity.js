@@ -1,8 +1,8 @@
 import React from "react";
+import styled from "@emotion/styled";
 import ActivityItem from "../../atoms/activities/ActivityItem";
 import { activitiesData } from "../../../redux/reducers/activitiesSlice";
 import { useSelector } from "react-redux";
-import styled from "@emotion/styled";
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/source/animate.css";
 

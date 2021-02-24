@@ -9,6 +9,7 @@ import BoardVoivodeship from "../molecules/Routers/BoardVoivodeship";
 import Field from "../molecules/Routers/Field";
 import Referees from "../molecules/Routers/Referees";
 import Rules from "../molecules/Routers/Rules";
+import OneActivityItem from "../molecules/Routers/OneActivityItem";
 
 const Content = () => {
     return (
@@ -20,6 +21,7 @@ const Content = () => {
                 <Route path="/field" component={Field} />
                 <Route path="/referees" component={Referees} />
                 <Route path="/rules" component={Rules} />
+                <Route path="/activity" component={OneActivityItem} />
                 <Route exact path="/" component={Activity} />
             </Switch>
         </StyledWrapper>
