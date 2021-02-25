@@ -4,6 +4,7 @@ import Header from "../organisms/Header";
 import Content from "../organisms/Content";
 import { BrowserRouter as Router } from "react-router-dom";
 import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
+import Footer from "../organisms/Footer";
 
 const MainLayout = () => {
     return (
@@ -13,6 +14,7 @@ const MainLayout = () => {
                 <Header />
                 <Content />
             </Router>
+            <Footer />
         </>
     )
 };
