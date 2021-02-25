@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.js": "/handball_site/static/js/main.ee2fa073.chunk.js",
-    "main.js.map": "/handball_site/static/js/main.ee2fa073.chunk.js.map",
+    "main.js": "/handball_site/static/js/main.c7f8a3da.chunk.js",
+    "main.js.map": "/handball_site/static/js/main.c7f8a3da.chunk.js.map",
     "runtime-main.js": "/handball_site/static/js/runtime-main.412820f3.js",
     "runtime-main.js.map": "/handball_site/static/js/runtime-main.412820f3.js.map",
     "static/css/2.40397a1b.chunk.css": "/handball_site/static/css/2.40397a1b.chunk.css",
-    "static/js/2.944d9d08.chunk.js": "/handball_site/static/js/2.944d9d08.chunk.js",
-    "static/js/2.944d9d08.chunk.js.map": "/handball_site/static/js/2.944d9d08.chunk.js.map",
+    "static/js/2.bb4ca778.chunk.js": "/handball_site/static/js/2.bb4ca778.chunk.js",
+    "static/js/2.bb4ca778.chunk.js.map": "/handball_site/static/js/2.bb4ca778.chunk.js.map",
     "index.html": "/handball_site/index.html",
     "static/css/2.40397a1b.chunk.css.map": "/handball_site/static/css/2.40397a1b.chunk.css.map",
-    "static/js/2.944d9d08.chunk.js.LICENSE.txt": "/handball_site/static/js/2.944d9d08.chunk.js.LICENSE.txt",
+    "static/js/2.bb4ca778.chunk.js.LICENSE.txt": "/handball_site/static/js/2.bb4ca778.chunk.js.LICENSE.txt",
     "static/media/slick-theme.css": "/handball_site/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.412820f3.js",
     "static/css/2.40397a1b.chunk.css",
-    "static/js/2.944d9d08.chunk.js",
-    "static/js/main.ee2fa073.chunk.js"
+    "static/js/2.bb4ca778.chunk.js",
+    "static/js/main.c7f8a3da.chunk.js"
   ]
 }
