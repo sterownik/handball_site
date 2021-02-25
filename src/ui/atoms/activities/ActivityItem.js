@@ -30,12 +30,12 @@ const ActivityItem = (props) => {
                         {props.activity.title}
                     </StyledTitle>
                     <StyledText>
-                        {props.activity.text.substring(0,300)}
+                        {props.activity.text.substring(0,300)}...
                     </StyledText>
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Link onClick={() => SaveActivity(props)} to="/activity">Learn more</Link>
+                <StyledLink onClick={() => SaveActivity(props)} to="/activity">Learn more</StyledLink>
             </CardActions>
         </StyledCard>
     )
@@ -50,6 +50,19 @@ const StyledTitle = styled.h5`
     @media (max-width: 720px) {
         font-size: 25px;
     }
+`;
+
+const StyledLink = styled(Link)`
+    color: inherit;
+    text-decoration: none;
+    margin-right: auto;
+    background-color: ${(props) => props.theme.colorGreenLight};
+    padding: 5px 40px;
+    border: 1px solid ${(props) => props.theme.colorGrey};
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px ${(props) => props.theme.colorGrey};
+    font-weight: 600;
+    font-family: system-ui;
 `;
 
 const StyledText = styled.p`
@@ -71,7 +84,7 @@ const StyledCard = styled(Card)`
     }
     
     .MuiCardMedia-root {
-        height: 300px;
+        height: 500px;
         background-size: cover;
         background-repeat: no-repeat;
     }
